@@ -6,7 +6,6 @@ const LandingPage = () => {
     <div className="h-full ">
       <LandingNavbar />
       <div>
-      <UserButton afterSignOutUrl="/"/>
     </div>
       <LandingHero />
     </div>
