@@ -27,10 +27,10 @@ export const Sidebar = () => {
   const pathname = usePathname();
 
   return (
-    <div className="space-y-4 py-4 flex flex-col h-full bg-black text-white border-r-2 border-x-slate-700">
+    <div className={cn("space-y-4 py-4 flex flex-col h-full bg-black text-white border-r-2 border-x-slate-700", poppins.className)}>
       <div className="px-3 py-2 flex-1">
         <Link href="/dashboard" className="flex items-center pl-3 mb-14">
-          <h1 className={cn("text-2xl font-bold", poppins.className)}>
+          <h1 className={cn("text-2xl font-bold bg-clip-text text-transparent  bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white via-fuchsia-600 to-orange-400 animate-text", poppins.className)}>
             Artificer
           </h1>
         </Link>
