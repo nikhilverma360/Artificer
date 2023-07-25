@@ -8,8 +8,8 @@ const DashboardPage = () => {
   return (
     <div>
       <Heading
-        title="Image Generation"
-        description="Turn your prompt into an image."
+        title="Asset Generation"
+        description="Turn your prompt into an game asset"
         icon={ImageIcon}
         iconColor="text-pink-700"
         bgColor="bg-pink-700/10"
