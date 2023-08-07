@@ -1,0 +1,11 @@
+.canvas {
+  background-color: #000000;
+  opacity: 1;
+  background-image: linear-gradient(#a4a4a4 0.8px, transparent 0.8px),
+    linear-gradient(90deg, #a4a4a4 0.8px, transparent 0.8px),
+    linear-gradient(#a4a4a4 0.4px, transparent 0.4px),
+    linear-gradient(90deg, #a4a4a4 0.4px, #000000 0.4px);
+  background-size: 20px 20px, 20px 20px, 4px 4px, 4px 4px;
+  background-position: -0.8px -0.8px, -0.8px -0.8px, -0.4px -0.4px,
+    -0.4px -0.4px;
+}
