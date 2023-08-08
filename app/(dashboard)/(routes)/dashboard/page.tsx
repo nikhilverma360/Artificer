@@ -1,5 +1,6 @@
 "use client";
 
+import styles from './styles.module.css'
 import * as z from "zod";
 import axios from "axios";
 import Image from "next/image";
@@ -98,7 +99,7 @@ const PhotoPage = () => {
                     <Input
                       className="border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
                       disabled={isLoading}
-                      placeholder="A picture of a horse in Swiss alps"
+                      placeholder="Your Prompt Goes Here ..."
                       {...field}
                     />
                   </FormControl>
@@ -177,24 +178,26 @@ const PhotoPage = () => {
         {photos.length === 0 && !isLoading && (
           <Empty label="No images generated." />
         )}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-8">
-          {photos.map((src) => (
-            <Card key={src} className="rounded-lg overflow-hidden">
-              <div className="relative aspect-square">
-                <Image fill alt="Generated" src={src} />
-              </div>
-              <CardFooter className="p-2">
-                <Button
-                  onClick={() => window.open(src)}
-                  variant="secondary"
-                  className="w-full"
-                >
-                  <Download className="h-4 w-4 mr-2" />
-                  Download
-                </Button>
-              </CardFooter>
-            </Card>
-          ))}
+        <div className="">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-8">
+            {photos.map((src) => (
+              <Card key={src} className="rounded-lg overflow-hidden">
+                <div className="relative aspect-square">
+                  <Image fill alt="Generated" src={src} />
+                </div>
+                <CardFooter className="p-2">
+                  <Button
+                    onClick={() => window.open(src)}
+                    variant="secondary"
+                    className="w-full"
+                  >
+                    <Download className="h-4 w-4 mr-2" />
+                    Download
+                  </Button>
+                </CardFooter>
+              </Card>
+            ))}
+          </div>
         </div>
       </div>
     </div>
