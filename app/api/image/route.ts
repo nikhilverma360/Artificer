@@ -47,7 +47,7 @@ export async function POST(
     }
 
     const response = await openai.createImage({
-      prompt,
+      prompt: "on a white canvas, png, game assets" + prompt,
       n: parseInt(amount, 10),
       size: resolution,
     });
